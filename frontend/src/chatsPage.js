@@ -14,8 +14,9 @@ const ChatsPage = (props) => {
   );
 };
 
-// Corrija para ChatsPage.propTypes
+// Validando os tipos das propriedades recebidas
 ChatsPage.propTypes = {
+  // A propriedade 'User' deve ser um objeto com as prioridades 'username' e 'secret'
   user: PropTypes.shape({
     username: PropTypes.string.isRequired,
     secret: PropTypes.string.isRequired,
@@ -23,4 +24,3 @@ ChatsPage.propTypes = {
 };
 
 export default ChatsPage;
-

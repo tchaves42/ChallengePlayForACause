@@ -3,12 +3,15 @@ import axios from "axios";
 import PropTypes from 'prop-types';
 
 const AuthPage = (props) => {
+  // State para armazenar informações do formulário
   const [username, setUsername] = useState();
   const [secret, setSecret] = useState();
   const [email, setEmail] = useState();
   const [first_name, setFirstName] = useState();
   const [last_name, setLastName] = useState();
 
+  // Função chamada ao tentar fazer login
+  // Verifica na API se o usuário já é cadastrado
   const onLogin = (e) => {
     e.preventDefault();
     axios
@@ -17,6 +20,7 @@ const AuthPage = (props) => {
       .catch((e) => console.log(JSON.stringify(e.response.data)));
   };
 
+  // Função chamada ao se cadastrar
   const onSignup = (e) => {
     e.preventDefault();
     axios
